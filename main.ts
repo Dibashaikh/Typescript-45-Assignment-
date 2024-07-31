@@ -977,3 +977,33 @@ items.forEach(singleitem => console.log(singleitem));
 console.log("\nNow Enjoy Sandwich")
 }
 
+
+// 45=> Task
+
+// Write a function that stores information about a car in a Object.
+
+function creat_car(manufacturer, model, ... options){
+  
+    //Intilized a car object eith manufacturer and model.
+    
+    let car = {
+        manufacturer: manufacturer,
+        model: model,
+    };
+
+    // Add additional option of the car object.
+
+    options.forEach(option => {
+        let [key , value] = option.split(":");
+        car[key.trim()] = value.trim();
+    });
+
+    return car;
+
+}
+
+// Call the function to create a car object.
+
+let my_car = creat_car("Toyota", "Corrolla", "Color: Red", "Sunroof: True", "Year: 2024")
+
+console.log(my_car)
